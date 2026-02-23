@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>❤️</title>
+    <title>🧡🍊tatlı portakalıma</title>
     <style>
         * {
             margin: 0;
@@ -18,12 +18,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #FFDAE9;
+            background: #451d57;
             overflow: auto;
             padding: 24px;
         }
 
-        /* Envelope stage: no modal, just envelope on pink background */
+        /* Envelope stage: no modal, just envelope on background */
         #envelopeStage {
             display: flex;
             flex-direction: column;
@@ -411,8 +411,8 @@
         .yes-only-btn {
             font-size: 20px;
             padding: 12px 24px;
-            background: #FFDAE9;
-            color: #333;
+            background: #451d57;
+            color: #ffffff; /* Kontrast icin beyaza cevrildi */
             border: 1px solid rgba(0,0,0,0.1);
             border-radius: 50px;
             cursor: pointer;
@@ -559,7 +559,7 @@
             }
         }
 
-        /* Success view: no modal card, content on pink background only */
+        /* Success view: no modal card, content on background only */
         .container.container--success {
             background: transparent;
             box-shadow: none;
@@ -570,7 +570,7 @@
         .success-yay {
             font-size: 24px;
             font-weight: 600;
-            color: #111;
+            color: #ffffff; /* Koyu arka plan uzerinde gorunmesi icin beyaza cevrildi */
             margin-bottom: 20px;
         }
 
@@ -590,7 +590,7 @@
         .reset-btn {
             background: none;
             border: none;
-            color: #666;
+            color: #cccccc; /* Koyu arka plan uzerinde gorunmesi icin acik griye cevrildi */
             font-size: 0.9em;
             cursor: pointer;
             text-decoration: underline;
@@ -600,13 +600,12 @@
         }
 
         .reset-btn:hover {
-            color: #111;
+            color: #ffffff;
         }
 
     </style>
 </head>
 <body>
-    <!-- ENVELOPE: no modal, just envelope on pink background -->
     <div id="envelopeStage">
         <div class="envelope" id="envelope">
             <div class="envelope-heart" aria-hidden="true">
@@ -623,9 +622,8 @@
 
     <div class="container">
         <div class="modal-inner">
-            <!-- VIEW: Puzzle (playing + completed state in same view) -->
             <div id="puzzleView" class="modal-view">
-                <h1 class="modal-title">Dear Gaby...</h1>
+                <h1 class="modal-title">Hayatımın aşkı, sensiz yarımım...</h1>
                 <div class="puzzle-container" id="puzzleContainer">
                     <div class="puzzle-grid-wrap" id="puzzleGridWrap">
                         <div class="puzzle-grid" id="puzzleGrid"></div>
@@ -635,19 +633,18 @@
                     </div>
                 </div>
                 <div class="puzzle-reveal-text" id="puzzleRevealText">
-                    <p class="complete-line">...you complete me.</p>
-                    <p class="valentine-question">Will you be my Valentine?</p>
-                    <button type="button" class="yes-only-btn" id="yesBtn">Yes</button>
+                    <p class="complete-line">...sen ise benim diğer yarımsın.</p>
+                    <p class="valentine-question">Bir tanemsin.</p>
+                    <button type="button" class="yes-only-btn" id="yesBtn">🍊🧡</button>
                 </div>
             </div>
 
-            <!-- VIEW: Success -->
             <div id="successView" class="modal-view">
-                <p class="modal-title">Yay, I can't wait!</p>
+                <p class="success-yay">Seni her şeyden ve herkesten çok seviyorum 🧡</p>
                 <div class="success-gif-wrap">
                     <img src="giphy.gif" alt="" />
                 </div>
-                <button type="button" class="reset-btn" id="resetBtn">Reset</button>
+                <button type="button" class="reset-btn" id="resetBtn">Başa Dön</button>
             </div>
         </div>
     </div>
@@ -818,7 +815,7 @@
             confetti.className = 'confetti';
             confetti.style.left = Math.random() * 100 + '%';
             confetti.style.top = '-10px';
-            confetti.style.background = ['#f093fb', '#f5576c', '#ffd700', '#4facfe', '#FFDAE9'][Math.floor(Math.random() * 5)];
+            confetti.style.background = ['#f093fb', '#f5576c', '#ffd700', '#4facfe', '#451d57'][Math.floor(Math.random() * 5)];
             const duration = 2 + Math.random() * 2;
             confetti.style.animation = `confetti-fall ${duration}s linear`;
             document.body.appendChild(confetti);
